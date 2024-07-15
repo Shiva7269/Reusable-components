@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh; /* Reduced height to move up a little */
+    background-color: #f4f4f4;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.form-control{
+    padding: 0.5rem 0.75rem ;
+}
+.map-container {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.form-container {
+    flex: 1;
+    margin-left: 20px; /* Added margin to move the form away from the map */
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}

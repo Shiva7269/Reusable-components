@@ -1,0 +1,94 @@
+/* You can add global styles to this file, and also import other style files */
+.app {
+    background-image: url(/assets/images/login_bg.jpg);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: repeat-x;
+    background-size: cover;
+    // height: 100vh;
+    background-position: bottom;
+}
+h3.rgstrname {
+    font-size: 24px !important;
+    text-transform: uppercase;
+    color: #072f86 !important;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+.login-link {
+    color: green;
+    text-decoration: none;
+}
+
+.login-link:hover {
+    text-decoration: underline; 
+}
+.required::after{
+    content: " * ";
+    color: red;
+    font-size: 20px;
+}
+.alertmsg {
+    font-size: 12px;
+}
+.logout{
+    cursor: pointer;
+}
+app-account {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.dialog-title {
+    color: #333; 
+  }
+  
+  .dialog-content {
+    font-size: 16px; 
+  }
+  
+  .dialog-actions {
+    justify-content: flex-end; 
+  }
+  
+  .btn-no {
+    color: #777; 
+    background-color: #fff; 
+    border: 1px solid #ccc; 
+    margin: 10px
+  }
+  
+  .btn-no:hover {
+    background-color: #f0f0f0; 
+  }
+  
+  .btn-yes {
+    color: #fff; 
+    background-color: #dc3545; 
+    border: 1px solid #dc3545; 
+  }
+  
+  .btn-yes:hover {
+    background-color: #c82333; 
+  }
+
+  .mat-dialog-container {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+
+
+
+
+
+
+
+
+  

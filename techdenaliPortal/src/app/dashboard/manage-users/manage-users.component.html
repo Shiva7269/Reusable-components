@@ -1,0 +1,46 @@
+<div class="search_box">
+  <input type="text" [(ngModel)]="searchQuery" (input)="applySearchFilter()" class="form-control mb-3 mt-3"
+    placeholder="Search users......">
+</div>
+<div *ngIf="errorMsg" class="alert alert-danger">
+  {{totalItems}} Results For "{{searchQuery}}".
+</div> 
+<div *ngIf="filteredUsers.length > 0">
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">UserName</th>
+      <th scope="col">Email</th>
+      <th scope="col">Status</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of filteredUsers | paginate: { itemsPerPage: itemsPerPage, currentPage: currentPage }">
+        <td>{{user.userName}}</td>
+        <td>{{user.email}}</td>
+        <td>
+          <label class="toggle-switch">
+            <input type="checkbox" [checked]="user.status === 'active'" (click)="toggleStatus(user)">
+            <span class="slider"></span>
+          </label>
+        </td>
+        <td>
+          <button class="btn btn-danger" (click)="deleteUser(user._id)">Delete</button>
+        </td>
+    </tr>
+  </tbody>
+</table>
+<div class="pagination-container">
+  <div class="items-per-page">
+    <label for="itemsPerPage">Items per page:</label>
+    <select [(ngModel)]="itemsPerPage" (change)="onItemsPerPageChange()" id="itemsPerPage" class="form-control">
+        <option *ngFor="let option of pageSizeOptions" [value]="option">{{ option }}</option>
+    </select>
+</div>
+  <div class="pagination-info">
+    {{ getDisplayedRange() }} of {{ totalItems }}
+</div>
+  <pagination-controls (pageChange)="currentPage = $event"></pagination-controls>
+</div>
+</div>

@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="content">
+    <div class="map-container">
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d475.8411573034506!2d78.42267222574502!3d17.4247683989121!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb912cc0a4d36f%3A0x7fb57bb961c2a109!2sTechDenali!5e0!3m2!1sen!2sus!4v1712041043389!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+
+    <div class="form-container">
+      <h1 class="text-center mb-4">Contact Us</h1>
+      
+      <form (ngSubmit)="submitForm()" #contactForm="ngForm">
+        <div class="mb-3">
+          <label for="name" class="form-label">Name:</label>
+          <input type="text" class="form-control" id="name" name="name" [(ngModel)]="formData.name" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Email:</label>
+          <input type="email" class="form-control" id="email" name="email" [(ngModel)]="formData.email" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="phone" class="form-label">Phone Number:</label>
+          <input type="tel" class="form-control" id="phone" name="phone" [(ngModel)]="formData.phone" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="message" class="form-label">Message:</label>
+          <ejs-richtexteditor id="message" name="message" [(ngModel)]="formData.message" >
+            <div [innerHTML]="storefrontContent"></div>
+          </ejs-richtexteditor> 
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block" [disabled]="contactForm.invalid">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>

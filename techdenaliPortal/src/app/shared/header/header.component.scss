@@ -1,0 +1,45 @@
+.header{
+    position: relative;
+    top: 0%;
+    background-color: darkblue;
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+}
+.img-logo{
+    height: 50px;
+    width: 160px;
+    margin-left: 62px 
+}
+.user-text {
+    margin-left: auto;
+}
+.user-text a {
+    margin-right: 10px; 
+    color:#fff;
+    text-decoration: none; 
+    text-align: right;
+}
+.user-text a + a {
+    margin-left: 10px; 
+}
+.logo-and-registration {
+    display: flex;
+    align-items: center;
+}
+
+/* Add styles for when a link is active */
+// a.active {
+//     color: #007bff; /* Change the color to blue */
+//     text-decoration: underline; /* Add an underline */
+//     font-weight: bold; /* Make the text bold */
+//   }
+  a.active {
+    color: #ffffff; /* Change the color to blue */
+    text-decoration: underline; /* Add an underline */
+    font-weight: bold; /* Make the text bold */
+}
+.user-text a.active {
+    text-decoration: underline;
+    font-weight: bold;
+}

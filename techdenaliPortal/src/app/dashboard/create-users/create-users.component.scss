@@ -1,0 +1,23 @@
+.card{
+    border: 3px solid #e2e8f0;
+    width: 380px;
+    padding: 20px;
+    // position: absolute;
+}
+h3.rgstrname {
+    font-size: 24px !important;
+    text-transform: uppercase;
+    color: #072f86 !important;
+}
+
+.login-link {
+    color: green;
+    text-decoration: none;
+}
+
+.login-link:hover {
+    text-decoration: underline; 
+}
+div#alertmsg {
+    font-size: 12px;
+}

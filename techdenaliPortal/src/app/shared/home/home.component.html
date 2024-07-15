@@ -1,0 +1,6 @@
+<ng-container *ngIf="loggedInUser; else notLoggedIn">
+    <app-home-dashboard></app-home-dashboard>
+  </ng-container>
+  <ng-template #notLoggedIn>
+    <app-techpage></app-techpage>
+  </ng-template>

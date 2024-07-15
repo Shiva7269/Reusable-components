@@ -1,0 +1,26 @@
+{
+  "menuItems": [
+    {
+      "label": "Home",
+      "route": "/"
+    },
+    {
+      "label": "Account",
+      "route": "/account"
+    }
+  ],
+  "authLinks": [
+    {
+      "label": "Login",
+      "route": "/login"
+    },
+    {
+      "label": "Register",
+      "route": "/registration"
+    },
+    {
+      "label": "Contact Us",
+      "route": "/contact-us"
+    }
+  ]
+}

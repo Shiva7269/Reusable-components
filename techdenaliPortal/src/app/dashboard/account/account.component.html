@@ -1,0 +1,28 @@
+<app-bread-crumb></app-bread-crumb>
+
+<div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div *ngIf="authService.loggedInUser" class="card sidebar">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/account/myAccount" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">My Account</a>
+            </li>
+            <li class="nav-item" *ngIf="loggedInUser?.privilege === 'Admin'">
+              <a class="nav-link" routerLink="/account/create-user" routerLinkActive="active">Create Users</a>
+            </li>
+            <li class="nav-item" *ngIf="loggedInUser?.privilege === 'Admin'">
+              <a class="nav-link" routerLink="/account/manage-users" routerLinkActive="active">Manage Users</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/account/change-password" routerLinkActive="active">Change Password</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,22 @@
+<div class="header">
+  <div class="logo-and-registration">
+      <img src="../../assets/logo.png" alt="logo" class="img-logo" [routerLink]="loginStatus ? '' : '/'">
+      <div class="user-text">
+          <ng-container *ngIf="loginStatus; else notLoggedIn">
+            <a *ngFor="let item of menuItems" 
+            [routerLink]="item.route"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: item.route === '/' }">{{ item.label }}</a>
+         
+              <span> | </span>
+              <a class="logout" (click)="logout()">Logout</a>
+          </ng-container>
+          <ng-template #notLoggedIn>
+              <a *ngFor="let item of authLinks" 
+                 [routerLink]="item.route"
+                 routerLinkActive="active"
+                 [routerLinkActiveOptions]="{ exact: item.exact }">{{ item.label }}</a>
+          </ng-template>
+      </div>
+  </div>
+</div>
